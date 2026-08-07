@@ -4,18 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install": "cd portfolio && npm install",
     "dev": "cd portfolio && npm run dev",
-    "build": "cd portfolio && npm run build",
+    "build": "cd portfolio && npm install && npm run build",
     "start": "cd portfolio && npm run start",
-    "vercel-build": "cd portfolio && npm run build",
+    "vercel-build": "cd portfolio && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "next": "16.3.0",
-    "react": "19.2.8",
-    "react-dom": "19.2.8"
-  },
+  "dependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
