@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "install": "cd portfolio && npm install",
+    "dev": "cd portfolio && npm run dev",
+    "build": "cd portfolio && npm run build",
+    "start": "cd portfolio && npm run start",
     "vercel-build": "cd portfolio && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
