@@ -2,6 +2,7 @@
 
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 import type { Project } from "@/data/portfolio";
 
@@ -16,6 +17,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const rotateY = useTransform(x, [-50, 50], [-15, 15]);
   const [selectedImage, setSelectedImage] = useState<string | null>(project.previewImages?.[0] ?? null);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
+  const [portalElement, setPortalElement] = useState<HTMLElement | null>(null);
+
+  useEffect(() => {
+    setPortalElement(document.body);
+  }, []);
 
   useEffect(() => {
     if (!isViewerOpen) return;
@@ -167,30 +173,33 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           )}
         </div>
       </div>
-      {isViewerOpen && selectedImage ? (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/95 p-4 backdrop-blur-sm"
-          onClick={() => setIsViewerOpen(false)}
-        >
-          <div
-            className="relative max-h-full w-full max-w-6xl overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950 shadow-[0_0_120px_rgba(0,0,0,0.45)]"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <button
-              type="button"
-              className="absolute right-4 top-4 z-10 inline-flex h-11 w-11 items-center justify-center rounded-full bg-slate-950/80 text-slate-100 transition hover:bg-slate-900"
+      {isViewerOpen && selectedImage && portalElement
+        ? createPortal(
+            <div
+              className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/95 p-4 backdrop-blur-sm"
               onClick={() => setIsViewerOpen(false)}
             >
-              ×
-            </button>
-            <img
-              src={selectedImage}
-              alt={`${project.name} fullscreen preview`}
-              className="h-[70vh] w-full object-contain bg-slate-950"
-            />
-          </div>
-        </div>
-      ) : null}
+              <div
+                className="relative max-h-full w-full max-w-6xl overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950 shadow-[0_0_120px_rgba(0,0,0,0.45)]"
+                onClick={(event) => event.stopPropagation()}
+              >
+                <button
+                  type="button"
+                  className="absolute right-4 top-4 z-10 inline-flex h-11 w-11 items-center justify-center rounded-full bg-slate-950/80 text-slate-100 transition hover:bg-slate-900"
+                  onClick={() => setIsViewerOpen(false)}
+                >
+                  ×
+                </button>
+                <img
+                  src={selectedImage}
+                  alt={`${project.name} fullscreen preview`}
+                  className="h-[70vh] w-full object-contain bg-slate-950"
+                />
+              </div>
+            </div>,
+            portalElement
+          )
+        : null}
     </motion.article>
   );
 }

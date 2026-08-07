@@ -32,8 +32,8 @@ export const projects: Project[] = [
     problem:
       "Manual attendance tracking was time-consuming and made it difficult for parents and teachers to monitor attendance.",
     solution:
-      "A QR-based attendance system with teacher monitoring, reports, and SMS notifications for parents.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "SMS API"],
+      "A QR-based attendance system with teacher monitoring, reports, and Telegram notifications for parents.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "Telegram API"],
     github: "https://github.com/jeprcks/Smartendance",
     live: "https://umapadelementaryschool.vercel.app/login?from=%2F",
     previewImages: [
