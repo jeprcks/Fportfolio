@@ -35,6 +35,13 @@
   box-sizing: border-box;
 }
 
+img,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -44,6 +51,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 ::selection {

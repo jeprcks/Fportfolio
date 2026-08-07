@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   title: "John Jeffrey Baclay | Frontend & Full-Stack Developer",
   description:
     "Portfolio of John Jeffrey Baclay, a Frontend and Full-Stack Developer from Cebu, Philippines, specializing in modern web applications, e-commerce, and digital experiences.",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+  },
   openGraph: {
     title: "John Jeffrey Baclay | Frontend & Full-Stack Developer",
     description:

@@ -37,17 +37,17 @@ export default function Hero() {
             I turn ideas into interactive digital experiences. Building modern websites, web applications, e-commerce platforms, and digital products.
           </p>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:justify-start">
             <a
               href="#projects"
-              className="inline-flex min-h-[56px] items-center justify-center rounded-full bg-cyan-400 px-8 text-sm font-semibold text-slate-950 shadow-[0_18px_60px_-30px_rgba(34,211,238,0.95)] transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-300"
+              className="inline-flex w-full min-h-[56px] items-center justify-center rounded-full bg-cyan-400 px-8 text-sm font-semibold text-slate-950 shadow-[0_18px_60px_-30px_rgba(34,211,238,0.95)] transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-300 sm:w-auto"
               data-cursor
             >
               View My Work
             </a>
             <a
               href="#contact"
-              className="inline-flex min-h-[56px] items-center justify-center rounded-full border border-white/15 bg-white/5 px-8 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-white/10"
+              className="inline-flex w-full min-h-[56px] items-center justify-center rounded-full border border-white/15 bg-white/5 px-8 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 sm:w-auto"
               data-cursor
             >
               Let's Work Together
@@ -80,7 +80,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
-          className="relative flex-1 min-w-[360px] lg:min-w-[460px]"
+          className="relative w-full max-w-[460px] lg:flex-1"
         >
           <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-cyan-500/10 via-transparent to-violet-500/10" />
           <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-slate-900/95 px-8 py-10 shadow-[0_50px_120px_-40px_rgba(15,23,42,0.8)]">
