@@ -49,16 +49,16 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: "WasteWise",
-    category: "Management System",
+    name: "Don Macchiatos",
+    category: "Sales Interface",
     description:
-      "Community waste management platform with schedule tracking, notifications, route monitoring, and reporting.",
+      "A sales-focused interface for managing transactions, product listings, dashboards, and daily operations.",
     problem:
-      "Community waste collection lacked reliable scheduling, notifications, and performance visibility.",
+      "The business needed a centralized way to manage sales workflows, product inventory, and performance insights without relying on scattered tools.",
     solution:
-      "A waste management dashboard with route monitoring, reminders, and reporting controls for teams.",
-    technologies: ["Web Development", "Database", "SMS Notifications"],
-    github: "https://github.com/jeprcks/WasteWise",
+      "A modern sales dashboard with transaction management, product controls, reporting views, and streamlined operational tools for daily business use.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "Dashboard", "Sales UI"],
+    github: "https://github.com/jeprcks/don-mach-sales-interface",
   },
   {
     name: "FureverHome",
