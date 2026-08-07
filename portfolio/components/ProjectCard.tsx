@@ -68,8 +68,18 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               <span className="h-2.5 w-2.5 rounded-full bg-rose-400/90" />
             </div>
             <span className="rounded-full bg-slate-950/70 px-3 py-1 text-[11px] uppercase tracking-[0.28em] text-slate-400">
-              Preview
+              Case Study
             </span>
+          </div>
+          <div className="space-y-4 text-sm text-slate-300">
+            <div>
+              <p className="text-xs uppercase tracking-[0.28em] text-cyan-300">The problem</p>
+              <p className="mt-2 text-slate-200">{project.problem}</p>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-[0.28em] text-cyan-300">The solution</p>
+              <p className="mt-2 text-slate-200">{project.solution}</p>
+            </div>
           </div>
             {project.previewImages?.length ? (
               <div className="space-y-4">
@@ -147,7 +157,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               data-cursor
             >
               <ExternalLink size={16} />
-              Live Demo
+              View Case Study
             </a>
           ) : (
             <div className="flex items-center gap-2 rounded-full border border-dashed border-slate-700 bg-slate-900/90 px-5 py-3 text-sm text-slate-500">

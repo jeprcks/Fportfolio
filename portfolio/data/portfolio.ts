@@ -15,6 +15,8 @@ export type Project = {
   name: string;
   category: string;
   description: string;
+  problem: string;
+  solution: string;
   technologies: string[];
   github: string;
   live?: string;
@@ -27,6 +29,10 @@ export const projects: Project[] = [
     category: "Web Application",
     description:
       "QR Code-based attendance and class monitoring system for teachers, students, and parents.",
+    problem:
+      "Manual attendance tracking was time-consuming and made it difficult for parents and teachers to monitor attendance.",
+    solution:
+      "A QR-based attendance system with teacher monitoring, reports, and SMS notifications for parents.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "SMS API"],
     github: "https://github.com/jeprcks/Smartendance",
     live: "https://umapadelementaryschool.vercel.app/login?from=%2F",
@@ -47,6 +53,10 @@ export const projects: Project[] = [
     category: "Management System",
     description:
       "Community waste management platform with schedule tracking, notifications, route monitoring, and reporting.",
+    problem:
+      "Community waste collection lacked reliable scheduling, notifications, and performance visibility.",
+    solution:
+      "A waste management dashboard with route monitoring, reminders, and reporting controls for teams.",
     technologies: ["Web Development", "Database", "SMS Notifications"],
     github: "https://github.com/jeprcks/WasteWise",
   },
@@ -55,6 +65,10 @@ export const projects: Project[] = [
     category: "Web Platform",
     description:
       "Rescue and adoption platform for dogs with care resources and adoption support.",
+    problem:
+      "Local shelter animals needed a better adoption platform and care resource hub.",
+    solution:
+      "A rescue adoption portal that connects shelters, adopters, and volunteers with pet profiles and support resources.",
     technologies: ["Dart", "Firebase"],
     github: "https://github.com/jeprcks/FureverHome",
   },
@@ -63,6 +77,10 @@ export const projects: Project[] = [
     category: "E-Commerce",
     description:
       "Online pizza ordering experience with product browsing, cart management, and checkout flow.",
+    problem:
+      "Small restaurants needed a simpler online ordering experience with menu browsing and checkout.",
+    solution:
+      "A pizza shop ordering flow with product discovery, cart management, and checkout.",
     technologies: ["Node.js", "Next.js", "E-Commerce"],
     github: "https://github.com/jeprcks/AlbertosPizzaShop",
   },
@@ -73,21 +91,45 @@ export const services = [
     title: "Websites",
     description:
       "Modern, responsive websites for businesses, organizations, portfolios, and personal brands.",
+    previewHeading: "Web experiences designed to convert",
+    previewPoints: [
+      "Landing pages with strong clear calls to action.",
+      "Branded responsive layouts for every device.",
+      "Fast, readable, and polished visual storytelling.",
+    ],
   },
   {
     title: "Web Applications",
     description:
       "Custom dashboards, management systems, monitoring systems, and business applications.",
+    previewHeading: "User workflows built for scale",
+    previewPoints: [
+      "Dashboard interfaces with real-time clarity.",
+      "Intuitive user flows for complex workflows.",
+      "Performance-focused app architecture.",
+    ],
   },
   {
     title: "E-Commerce",
     description:
       "Online stores, ordering platforms, product catalogs, and customer-focused shopping experiences.",
+    previewHeading: "E-commerce with conversion-first UI",
+    previewPoints: [
+      "Product browsing that feels effortless.",
+      "Optimized cart and checkout experience.",
+      "Sales-focused visual hierarchy and trust signals.",
+    ],
   },
   {
     title: "UI / UX",
     description:
       "Clean, intuitive interfaces designed around usability and user experience.",
+    previewHeading: "Interfaces built with clarity",
+    previewPoints: [
+      "Human-centered design decisions.",
+      "Polished micro-interactions and motion.",
+      "Design systems that scale with your product.",
+    ],
   },
 ];
 
@@ -128,7 +170,7 @@ export const timeline = [
   {
     title: "University Thesis",
     company: "SMARTendance",
-    period: "2024",
+    period: "2026",
     details:
       "Led the Smartendance thesis project, building a QR-based attendance system with teacher and parent support.",
   },
