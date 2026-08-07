@@ -57,7 +57,7 @@ export const projects: Project[] = [
       "The business needed a centralized way to manage sales workflows, product inventory, and performance insights without relying on scattered tools.",
     solution:
       "A modern sales dashboard with transaction management, product controls, reporting views, and streamlined operational tools for daily business use.",
-    technologies: ["Next.js", "React", "Tailwind CSS", "Dashboard", "Sales UI"],
+    technologies: ["Next.js", "React", "Tailwind CSS", "Dart", "Laravel", "SQL"],
     github: "https://github.com/jeprcks/don-mach-sales-interface",
   },
   {
