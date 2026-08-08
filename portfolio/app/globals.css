@@ -113,7 +113,7 @@ textarea:focus {
   background: rgba(56, 189, 248, 0.95);
   pointer-events: none;
   transform: translate3d(-50%, -50%, 0);
-  transition: transform 0.12s ease-out, background-color 0.2s ease;
+  transition: transform 0.12s ease-out, background-color 0.2s ease, width 0.2s ease, height 0.2s ease;
   z-index: 9999;
 }
 

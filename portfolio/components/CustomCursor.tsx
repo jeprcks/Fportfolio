@@ -10,8 +10,21 @@ export default function CustomCursor() {
     if (window.matchMedia("(hover: none), (pointer: coarse)").matches) return;
 
     const cursor = cursorRef.current;
+    let frameId: number | null = null;
+    let pointerX = 0;
+    let pointerY = 0;
+
+    const updateCursor = () => {
+      cursor.style.transform = `translate3d(${pointerX}px, ${pointerY}px, 0)`;
+      frameId = null;
+    };
+
     const handlePointerMove = (event: MouseEvent) => {
-      cursor.style.transform = `translate3d(${event.clientX}px, ${event.clientY}px, 0)`;
+      pointerX = event.clientX;
+      pointerY = event.clientY;
+      if (frameId === null) {
+        frameId = window.requestAnimationFrame(updateCursor);
+      }
     };
 
     const handlePointerOver = (event: MouseEvent) => {
@@ -25,6 +38,9 @@ export default function CustomCursor() {
     window.addEventListener("pointerout", handlePointerOver);
 
     return () => {
+      if (frameId !== null) {
+        window.cancelAnimationFrame(frameId);
+      }
       window.removeEventListener("pointermove", handlePointerMove);
       window.removeEventListener("pointerover", handlePointerOver);
       window.removeEventListener("pointerout", handlePointerOver);
